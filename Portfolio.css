@@ -1,0 +1,2025 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: black;
+}
+nav {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    font-family: sans-serif;
+    position: fixed;
+    color: #00FFFF;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    z-index: 999;
+    top: 0px;
+    height: 90px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+} 
+nav h1 {
+    font-size: 45px;
+}
+nav i
+{
+    font-size: 25px;
+}
+nav .subNav {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+    transition: all 1s;
+    position: relative;
+}
+nav .subNav a {
+    text-decoration: none;
+    color: #00FFFF;
+    font-size: 23px;
+    /* background-color: wheat; */
+    padding: 5px;
+    font-family: sans-serif;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    transition: all 1s;
+    border-radius: 5px;
+   
+}
+.subNav a:hover
+{
+    color: black;
+     z-index: 1;
+      border-radius: 5px;
+}
+/* nav .subNav a::before {
+    content: "";
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    left: 0px;
+    bottom: 0px;
+    transition: all 1s;
+} */
+nav .subNav a::after {
+    content: "";
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background-color: #00FFFF;
+    left: 0px;
+    top: 0px;
+    transition: all 1s;
+    border-radius: 5px;
+   
+    z-index: -1;
+}
+.a4
+{
+    display: none;
+}
+ nav .subNav a:hover::after {
+    width: 100%;
+}
+input:checked~.subNav
+{
+    right: 5%;
+}
+
+.cube {
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 5s infinite linear;
+    transform: rotateX(-10deg) rotateY(10deg);
+}
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 150px;
+     animation: face 1s 1;
+     /* overflow: hidden; */
+
+
+}
+.face-1
+{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    background-color: black ;
+    animation-name: proface;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes proface 
+{
+    from 
+    {
+        transform: scale(0);
+    }
+    to 
+    {
+        transform: scale(1);
+    }
+}
+.face-1 img
+{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 5px white;
+}
+.left-1 img
+{
+     width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 5px white;
+}
+.left-1
+{
+    width: 100%;
+    height: 50%;
+      position: absolute;
+    top: 0;
+    background-color: black;
+    animation-name: proleft;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes proleft 
+{
+    from 
+    {
+        transform: scale(0);
+    }
+    to 
+    {
+        transform: scale(1);
+    }
+}
+.top {
+    background-color: white;
+    transform: rotateX(90deg) translateZ(100px);
+     background-image: linear-gradient(to right, #00FFFF,white);
+}
+.bottom {
+     background-image: linear-gradient(to right, #00FFFF,white);
+    transform: rotateX(90deg) translateZ(-200px);
+}
+.right {
+     background-image: linear-gradient(to right, #00FFFF,white);
+    transform: rotateY(90deg) translateZ(100px);
+    height: 300px;
+}
+.left {
+     background-image: linear-gradient(#00FFFF,white);
+    transform: rotateY(-90deg) translateZ(100px);
+    height: 300px;
+}
+.left h2
+{
+    transform: rotate(270deg) rotateX(-10deg) ;
+    font-size: 25px;
+    margin-top: 180px;
+}
+.back{
+     background-image: linear-gradient(to right, #00FFFF,white);
+    transform: rotateX(-180deg) translateZ(100px);
+    height: 300px;
+
+}
+.front {
+    background-image: linear-gradient(#00FFFF,white);
+    transform: rotateX(0deg) translateZ(100px);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    justify-content: center;
+    text-align: center;
+}
+nav label
+{
+    display: none;
+    color: white;
+}
+input
+{
+    display: none;
+}
+.my-info
+{
+    padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.basic-info
+{
+    width: 50%;
+}
+.my-info h1
+{
+    font-size: 50px;
+    color: white;
+    font-family: sans-serif;
+}
+.my-info p
+{
+    color: white;
+    padding-top: 10px;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: left;
+    word-spacing: 5px;
+}
+i
+{
+    color: white;
+}
+.basic-info h1:nth-child(2)
+{
+    color: #00FFFF;
+   
+}
+.p2
+{
+    display: none;
+}
+.my-profile-pic
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 50px;
+}
+.circle-1
+{
+    
+    background-color: gray;
+    width: 350px;
+    opacity: 1;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.circle-2
+{
+    background-color: lightgrey;
+    width: 250px;
+    opacity: 0.7;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.circle-3
+{
+
+    background-color: #00FFFF;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.my-pic 
+{ 
+    position: absolute;
+    z-index: 9;
+    width: 250px;
+    height: 250px;
+    animation-name: mypic;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+}
+@keyframes mypic 
+{
+    0%
+    {
+        transform: scale(0.3);
+        opacity: 0.3;
+    }
+    10%
+    {
+        transform: scale(0.4);
+        opacity: 0.4;
+    }
+    20%
+    {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    30%
+    {
+        transform: scale(0.6);
+        opacity: 0.6;
+    }
+    40%
+    {
+        transform: scale(0.7);
+        opacity: 0.7;
+    }
+    50%
+    {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    60%
+    {
+        transform: scale(0.9);
+        opacity: 0.9;
+    }
+    70%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+    80%
+    {
+        transform: scale(1.1);
+    }
+    90%
+    {
+        transform: scale(1.2);
+        
+    }
+    95%
+    {
+        transform: scale(1.1);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+.my-about
+{
+    min-height: 80vh;
+    display: flex;
+    box-sizing: unset;
+    padding: 30px 0px 30px 0px;
+    scroll-margin: 130px;
+    flex-direction: column;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.about-one
+{
+    text-align: center;
+    color: #00FFFF;
+    height: 100px;
+}
+.line1
+{
+    width: 83px;
+    margin: auto;
+    justify-content: center;
+}
+.line1 span, .line2 span, .line3 span
+{
+    display: inline-block;
+    border-top: 2px solid yellow;
+    text-align: left;
+}
+.line2
+{
+    width: 100px;
+    margin: auto;
+    justify-content: center;
+}
+.line3
+{
+    width: 140px;
+    margin: auto;
+    justify-content: center;
+}
+.sp
+{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    gap: 3px;
+}
+.sp1
+{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    gap: 3px;
+}
+.sp2
+{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    gap: 3px;
+}
+.sp5
+{
+     display: flex;
+    justify-content: left;
+    text-align: left;
+    margin-left: 10px;
+    gap: 3px;
+    /* overflow: hidden; */
+}
+.sp5 span:first-child
+{
+    width: 40px;
+    animation-name: code5;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp5 span:nth-child(2)
+{
+    width: 20px;
+    animation-name: code6;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp5 span:nth-child(3)
+{
+    width: 10px;
+    animation-name: code7;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp5 span:last-child
+{
+    width: 5px;
+    animation-name: code8;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes code5
+{
+    0%
+    {
+        width: 22px;
+    }
+    50%{
+        width: 0px;
+    }
+    100%
+    {
+        width: 22px;
+    }
+}
+@keyframes code6
+{
+    0%
+    {
+        width: 18px;
+    }
+    50%{
+        width: 0px;
+    }
+    100%
+    {
+        width: 18px;
+    }
+}
+@keyframes code7
+{
+    0%
+    {
+        width: 10px;
+    }
+    50%{
+        width: 0px;
+    }
+    100%
+    {
+        width: 10px;
+    }
+}
+@keyframes code8
+{
+    0%
+    {
+        width: 5px;
+    }
+    50%{
+        width: 0px;
+    }
+    100%
+    {
+        width: 5px;
+    }
+}
+.sp span:first-child
+{
+    width: 40px;
+    animation-name: code1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp span:nth-child(2)
+{
+    width: 20px;
+    animation-name: code2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp span:nth-child(3)
+{
+    width: 10px;
+    animation-name: code3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp span:last-child
+{
+    width: 5px;
+    animation-name: code4;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+p
+{
+    text-align: justify;    
+}
+.my-about-two
+{
+
+    display: flex;
+    gap: 80px;
+    margin-top: 20px;
+    justify-content: space-around;
+    padding: 0px 80px 0px 80px;
+}
+.sp1 span:first-child
+{
+    width: 40px;
+    animation-name: line1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp1 span:nth-child(2)
+{
+    width: 20px;
+    animation-name: line2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp1 span:nth-child(3)
+{
+    width: 10px;
+    animation-name: line3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp1 span:last-child
+{
+    width: 5px;
+    animation-name: line4;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp2 span:first-child
+{
+    width: 40px;
+    animation-name: line1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp2 span:nth-child(2)
+{
+    width: 20px;
+    animation-name: line2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp2 span:nth-child(3)
+{
+    width: 10px;
+    animation-name: line3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.sp2 span:last-child
+{
+    width: 5px;
+    animation-name: line4;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.my-about-con
+{
+    width: 60%;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.my-about-con p
+{
+    color: white;
+    padding-top: 10px;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: left;
+    word-spacing: 5px;
+
+}
+.profile-pic-two
+{
+    width: 250px;
+    height: 250px;
+    box-shadow: 15px 15px 0px #00FFFF;
+    position: relative;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.heading
+{
+    position: relative;
+    width: 200px;
+    height: 80px;
+    left: -60px;
+}
+.cont-skill
+{
+    padding-left: 60px;
+    margin: 0px 30px 20px 30px;
+    padding-right: 10px;
+
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.cont-skill p
+{
+    color: white;
+    margin-top: -40px;
+     line-height: 25px;
+    font-size: 20px;
+}
+.hed
+{
+    border-bottom: 2px solid yellow;
+    width: 90px;
+    color: white;
+    padding: 5px 10px 2px 10px;
+    position: absolute;
+    left: 48px;
+    top: -5px;
+}
+.hed-line-2
+{
+    width: 60px;
+}
+.hed-line-3
+{
+    width: 160px;
+}
+.hed-line-4
+{
+    width: 115px;
+}
+.hed-line-5
+{
+    width: 157px;
+}
+.num
+{
+    position: absolute;
+    border: 2px solid yellow;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.border-1
+{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-left: 10px solid #00FFFF;
+    border-top: 10px solid #00FFFF;
+    top: -13px;
+    left: -13px;
+}
+.my-pic2
+{
+    width: 100%;
+    height: 100%;
+}
+.name1
+{
+    position: relative;
+}
+.name1 h5
+{
+    color: white;
+    position: absolute;
+    top: 50px;
+    font-size: 24px;
+    left:25px;
+}
+.bttn i
+{
+    color: #00FFFF;
+}
+.bttn
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    
+}
+
+.btn1
+{
+    margin-top: 15px;
+    background-color: black;
+    border: 1px solid grey;
+    color: white;
+    padding: 7px 12px 7px 12px;
+    border-radius: 10px;
+    width: 140px;
+}
+.name1 h1
+{
+    font-size: 100px;
+    font-family: sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00FFFF;
+    opacity: 0.7;
+    animation: text1 3s infinite;
+}
+@keyframes text1
+{
+    0%
+    {
+        opacity: 0.3;
+    }
+    20%
+    {
+        opacity: 0.7;
+    }
+    40%
+    {
+        opacity: 1;
+    }
+    60%
+    {
+        opacity: 0.8;
+    }
+    80%
+    {
+        opacity: 0.5;
+    }
+    100%
+    {
+        opacity: 0.4;
+    }
+}
+/* .subNav a:nth-child(2):hover 
+{
+    color: #00FFFF;
+    background-color: red;
+} */
+.my-skill
+{
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 100px;
+    padding-top: 200px;
+    padding-bottom: 0px;
+    scroll-margin: 100px;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.my-skill img
+{
+    width: 80%;
+    height: 400px;
+   
+}
+.skill
+{
+     width: 300px;
+    height: 100px;
+}
+.skill-1
+{
+    position: absolute;
+    top: -10px;
+    left: 60px;
+    text-align: left;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.skill-2
+{
+   
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    text-align: left;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.skill-3
+{
+   
+    position: absolute;
+    top: 530px;
+    left: 60px;
+    text-align: left;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.skill p
+{
+    word-spacing: 0px;
+    text-indent: 0em;
+}
+.yline-1
+{
+    height: 100px;
+    width: 400px;
+    position: relative;
+    padding-top: 50px;
+    transform: rotate(350deg);
+    top: -63px;
+    left: 220px;
+}
+.yline-2
+{
+   height: 100px;
+    width: 400px;
+    position: relative;
+    padding-top: 50px;
+    transform: rotate(10deg) rotateY(200deg);
+    top: -160px;
+    left: -220px;
+}
+.yline-3
+{
+     height: 100px;
+    width: 400px;
+    position: relative;
+    padding-top: 50px;
+    transform: rotate(0deg) rotateY(180deg) rotateZ(180deg);
+    top: -70px;
+    left: 240px;
+}
+.yline-4
+{
+     height: 100px;
+    width: 400px;
+    position: relative;
+    padding-top: 50px;
+    transform: rotate(0deg) rotateY(0deg) rotateZ(180deg);
+    top: -170px;
+    left: -250px;
+}
+.yline-5
+{
+     height: 100px;
+    width: 400px;
+    position: relative;
+    padding-top: 50px;
+    transform: rotate(350deg) rotateY(0deg) rotateZ(180deg);
+    top: -180px;
+    left: -220px;
+}
+.yline-6
+{
+      height: 100px;
+    width: 400px;
+    position: relative;
+    padding-top: 50px;
+    transform: rotate(10deg) rotateY(180deg) rotateZ(180deg);
+    top: -280px;
+    left: 200px;
+}
+.codey-1
+{
+    position: absolute;
+    width: 50px;
+    top: 72px;
+    height: 2px;
+    background-color: yellow;
+    transform: rotate(120deg);
+}
+.codey-2
+{
+    position: absolute;
+    width: 280px;
+    left: 37px;
+    height: 2px;
+    background-color: yellow;
+    transform: rotate(0deg);
+}
+.codey-3
+{
+     position: absolute;
+    width: 80px;
+    left: 37px;
+    height: 2px;
+    background-color: yellow;
+    transform: rotate(0deg);
+}
+.cody-4
+{
+    position: absolute;
+    width: 50px;
+    top: 72px;
+    height: 2px;
+    background-color: yellow;
+    transform: rotate(120deg);
+}
+.numy-2
+{
+     height: 50px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    left: 315px;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+.numy-4 h3
+{
+  transform: rotateX(0deg) rotateZ(180deg);   
+}
+.numy-2 h3
+{
+    transform: rotateX(200deg) rotateZ(170deg);
+}
+.numy-3 h3
+{
+    transform: rotateX(200deg) rotateZ(0deg);
+}
+.numy-3
+{
+      height: 50px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    left: 315px;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+.numy-6
+{
+      height: 50px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    left: 315px;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+.numy-5 h3
+{
+     transform: rotateX(200deg) rotateZ(350deg);
+}
+.numy-1 h3
+{
+    transform: rotateX(0deg) rotateZ(10deg);
+}
+.numy-6 h3
+{
+     transform: rotateX(0deg) rotateZ(190deg);
+}
+.numy-5
+{
+       height: 50px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    left: 315px;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+.numy-4
+{
+      height: 50px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    left: 315px;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+.numy-1
+{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    left: 315px;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+.skill-4
+{
+   
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    text-align: left;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.skill-5
+{
+   
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    text-align: left;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.skill-6
+{
+   
+    position: absolute;
+    top: 530px;
+    right: 40px;
+    text-align: left;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.my-skill h1
+{
+    color: #00FFFF;
+    position: absolute;
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-top: -400px;
+}
+.skill h2
+{
+    text-align: center;
+    margin: 10px;
+}
+.my-skill-2
+{
+    display: none;
+    scroll-margin: 100px;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.my-project
+{
+    scroll-margin: -50px;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+.pro-cont-1 h2
+{
+    margin-bottom: 20px;
+}
+.pro-cont-1 h2 span
+{
+    color: #00FFFF;
+}
+.pro-cont-1 p
+{
+    font-size: 20px;
+    line-height: 25px;
+}
+.my-project-1
+{
+    display: flex;
+    min-height: 70vh;
+    margin-bottom: 80px;
+    /* animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry; */
+}
+@keyframes pro 
+{
+    0%
+    {
+        opacity: 0.8;
+        transform: scale(0.8);
+    }
+    /* 50%
+    {
+        opacity: 0.9;
+        transform: scale(0.9);
+    } */
+    /* 80%
+    {
+        opacity: 0.8;
+        transform: scale(0.9);
+    }  */
+     100%
+    {
+        opacity: 1;
+        transform: scale(1);
+    } 
+} 
+.pro-cont-1 button
+{
+    background-color: white;
+    color: black;
+    padding: 10px 15px 10px 15px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: all 0.5s;
+}
+.pro-cont-1 button:hover
+{
+    background-color: #00FFFF;
+    font-size: 15px;
+}
+.pro-cont-1 button i
+{
+    transition: all 0.5s;
+    margin-left: 5px;
+}
+.pro-cont-1 button:hover i
+{
+    transform: scale(1.2);
+}
+.link1
+{
+    color: black;
+}
+.cube-pro-1
+{
+    width: 40%;
+}
+.pro-cont-1
+{
+    color: white;
+    padding-top: 50px;
+    width: 50%;
+      animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.skill p
+{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.my-project
+{
+    min-height: 100vh;
+    scroll-margin: 100px;
+}
+.my-education
+{
+    min-height: 50vh;
+    scroll-margin: 100px;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.percentage
+{
+    padding: 0px 80px 0px 80px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+.grade
+{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.tenth
+{
+    min-width: 50%;
+   
+}
+.grade-1
+{
+
+    width: 100%;
+    background-color: white;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+   
+}
+.span1
+{
+    background-color: #00FFFF;
+    width: 72%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.span2
+{
+     background-color: #00FFFF;
+    width: 67%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 10px;
+}
+.span3
+{
+     background-color: #00FFFF;
+    width: 78%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 10px;
+}
+.my-conact
+{
+    padding: 0px 20px 0px 20px;
+    min-height: 60vh;
+     animation-name: pro;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.my-conact h1
+{
+    color: white;
+    padding-bottom: 50px;
+    margin-left: 90px;
+}
+.my-conact>h1 span
+{
+    color: #00FFFF;
+}
+.last-about-1 h2
+{
+    margin-bottom: 10px;
+}
+.last-about-1
+{
+    color: white;
+    width: 30%;
+}
+.last-about h3
+{
+    color: #00FFFF;
+    margin-bottom: 10px;
+}
+.last-about p
+{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.last-about a
+{
+    display: block;
+    line-height: 1.5;
+}
+.last-icons i
+{
+    color: #00FFFF;
+    font-size: 30px;
+    margin-top: 15px;
+}
+.last-about
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    color: white;
+    gap: 60px;
+    padding-bottom: 80px;
+}
+.contact
+{
+    display: flex;
+}
+.contact-1 h3
+{
+    margin-left: 60px;
+}
+.contact-1
+{
+    margin-left: -50px;
+}
+.angles-up
+{
+    height: 60px;
+    width: 60px;
+    margin-top: 130px;
+    margin-left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.angles-up-1
+{
+    height: 30px;
+    width: 30px;
+    margin-top: -30px;
+    margin-left: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.last-about-1 h2
+{
+    color: #00FFFF;
+}
+.clip-path1
+{
+    min-height: 40vh;
+    width: 100%;
+    display: none;
+}
+.path-1
+{
+    height: 350px;
+    width: 100%;
+    padding: 30px 0px 0px 0px;
+    background-color: lime;
+    border-start-end-radius: 95% 60%;
+}
+.path-2
+{
+    background-color: #00FFFF;
+    height: 320px;
+    width: 100%;
+     border-start-start-radius: 0% 0%;
+     border-start-end-radius: 80% 60%;
+     padding-top: 80px;
+     display: flex;
+     flex-direction: column;
+     text-align: left;
+     align-items: center;
+
+    
+}
+.path-cont
+{
+    text-align: left;
+    width: 260px;
+    margin-top: 5px;
+}
+.path-cont p
+{
+    line-height: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+.path-cont  .logo1
+{
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+}
+.path-cont td
+{
+    padding-top: 10px;
+    font-size: 20px;
+}
+.path-cont p a:nth-child(2)
+{
+    margin-left: 0px;
+    margin-top: -30px;
+    display: inline-block;
+}
+.logo2
+{
+    height: 35px;
+    width: 25px;
+}
+p
+{
+    text-indent: 3em;
+    text-align: left;
+    word-spacing: 5px;
+
+}
+@keyframes code1
+{
+    0%
+    {
+        width: 35px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width: 35px;
+    }
+    
+}
+@keyframes code2
+{
+    0%
+    {
+        width: 23px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width: 23px;
+    }
+    
+}
+@keyframes code3
+{
+    0%
+    {
+        width: 14px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width: 14px;
+    }
+    
+}
+@keyframes code4
+{
+    0%
+    {
+        width: 8px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width:8px;
+    }
+}
+@keyframes line1
+{
+    0%
+    {
+        width: 70px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width: 70px;
+    }
+    
+}
+@keyframes line2
+{
+    0%
+    {
+        width: 40px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width: 40px;
+    }
+    
+}
+@keyframes line3
+{
+    0%
+    {
+        width: 22px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width: 22px;
+    }
+    
+}
+@keyframes line4
+{
+    0%
+    {
+        width: 12px;
+    }
+    50% 
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width:12px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:970px)
+{   
+    .my-skill
+{
+    display: none;
+}
+.my-skill-2
+{
+    display: block;
+}
+.cont-skill
+{
+    margin: 20px 20px 0px 20px;
+}
+}
+@media only screen and (min-width:600px) and (max-width:981px)
+{
+    nav .subNav{
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.5);
+        right: -50%;
+        top: 92px;
+        width: 150px;
+        padding: 17px;
+        min-height: 50vh;
+        border-radius: 5px;
+        flex-direction: column;
+         justify-content:left;
+        align-items: start;
+        padding-top: 0px;
+        
+    }
+    .subNav a 
+    {
+        color: white;
+    }
+    .a1 
+    {
+        margin-top: 15px;
+    }
+    nav label
+    {
+        display: block;
+        color: white;
+    }
+    nav .subNav
+    {
+        gap: 10px;
+    }
+    i 
+    {
+        color: white;
+    }
+    .my-info
+    {
+        flex-direction: column;
+        padding: 50px;
+        padding-top: 100px;
+    }
+    /* .my-about-two
+    {
+        min-height: 100vh;
+        display: flex;
+    flex-direction: column;
+    gap: 20px;
+     padding: 30px;
+    } */
+    .my-pic
+    {
+        top: 50px;
+    }
+    .basic-info
+    {
+        width: 100%;
+    }
+    .my-profile-pic
+    {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0px;
+    }
+    .p1
+    {
+        display: none;
+    }
+    .p2
+    {
+        display: block;
+        width: 100%;
+    }
+    .my-project-1
+    {
+        flex-direction: column;
+    }
+    .face
+    {
+        left: 0;
+    }
+    .cube-pro-1
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile-pic-two
+    {
+        margin-top: 60px;
+    }
+    .pro-cont-1
+    {
+        width: 100%;
+        padding: 50px;
+        margin-top: 100px;
+    
+    }
+    .name1 h5
+    {
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:600px)
+{
+    nav .subNav{
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.5);
+        right: -50%;
+        top: 92px;
+        width: 150px;
+        padding: 20px;
+        min-height: 50vh;
+        border-radius: 5px;
+        flex-direction: column;
+         justify-content:left;
+        align-items: start;
+        padding-top: 0px;
+        
+    }
+    .subNav a 
+    {
+        color: white;
+    }
+    .a1 
+    {
+        margin-top: 15px;
+    }
+    nav label
+    {
+        display: block;
+        color: white;
+    }
+    nav .subNav
+    {
+        gap: 10px;
+    }
+    i 
+    {
+        color: white;
+    }
+    .my-info
+    {
+        flex-direction:column;
+        padding: 10px;
+        text-align: center;
+        gap: 20px;
+        margin-top: 100px;
+        scroll-margin: 100px;
+    }
+    .basic-info
+    {
+        width: 100%;
+    }
+    .my-profile-pic
+    {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    .p1
+    {
+        display: none;
+    }
+    .profile-pic-two
+    {
+        margin: auto;
+    }
+    .p2
+    {
+        display: block;
+        padding: 20px;
+    }
+    .my-info h1
+    {
+    font-size: 40px;
+    color: white;
+    font-family: sans-serif;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    }
+    .my-p
+    .my-info p
+    {
+        text-align: left;
+        font-size: 17px;
+    }
+    .circle-1
+{
+    
+    background-color:lightgray;
+    width: 240px;
+    opacity: 0.7;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.circle-2
+{
+     background-color: gray;
+    width: 180px;
+    opacity: 0.7;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.circle-3
+{
+    background-color: #00FFFF;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.my-pic 
+{
+     z-index: 9;
+    width: 150px;
+    height: 150px;
+    top: 50px;
+}
+.about-one
+{
+    margin-top: 10px;
+}
+.a3
+{
+    display: none;
+}
+.a4
+{
+    display: inline;
+}
+.my-about-two
+{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+     padding: 30px;
+}
+.name1 h1
+{
+    font-size: 65px;
+    font-family: sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00FFFF;
+
+    opacity: 0.7;
+}
+.my-conact
+{
+    scroll-margin: 80px;
+}
+.my-about
+{
+    scroll-margin: 100px;
+}
+.my-about-con
+{
+    width: 100%;
+}
+.my-project-1
+{
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 20px;
+}
+.my-education
+{
+    scroll-margin: 100px;
+}
+.cube-pro-1
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face
+{
+    left: 0;
+}
+.name1 h5
+{
+    color: white;
+    position: absolute;
+    top: 33px;
+    font-size: 16px;
+    left:13px;
+}
+.pro-cont-1
+{
+    width: 100%;
+    padding: 20px;
+    margin-top: 150px;
+}
+.my-conact
+{
+    padding: 10px;
+}
+.last-about
+{
+    flex-direction: column;
+    padding: 10px;
+}
+.last-about-1, .navigation, .contact
+{
+    width: 100%;
+}
+
+.percentage
+{
+    grid-template-columns: auto;
+    padding: 20px;
+    
+}
+.grade-1
+{
+    width: 100%;
+}
+.tenth
+{
+    width: 100%;
+}
+.my-about
+{
+    padding-bottom: 0px;
+}
+
+
+
+ .my-conact
+    {
+        display: none;
+    }
+    .clip-path1
+    {
+        display: block;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:800px)
+{
+    .last-about-1, .navigation, .contact
+    {
+        width: 40%;
+    }
+    .last-about
+    {
+        justify-content: center;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:825px)
+{
+    .my-about-two
+    {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 0px;
+    }
+    .btn1
+    {
+        margin-top: 120px;
+    }
+    .profile-pic-two
+    {
+        margin: auto;
+    }
+    .my-about-con
+    {
+        width: 100%;
+    }
+    .my-skill
+   {
+        display: none;
+    }
+    .my-skill-2
+    {
+        display: block;
+    }
+    .bttn
+    {
+        margin-top: -100px;
+    }
+    .my-conact h1
+    {
+        margin-left: 0px;
+    }
+   
+}

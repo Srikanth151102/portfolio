@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+.box1
+{
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+}
+.background-green {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    background-color: #83c500;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+}
+
+.background-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    background-color: #00bcd4;
+    clip-path: polygon(0% 0%, 200px 20%, 20% 100%, 0 100%);
+}
