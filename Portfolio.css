@@ -1730,13 +1730,13 @@ p
     .name1 h5
     {
         font-size: 22px;
-    }
+
 }
 @media only screen and (min-width:300px) and (max-width:600px)
 {
     nav .subNav{
         position: fixed;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 1);
         right: -50%;
         top: 92px;
         width: 150px;
