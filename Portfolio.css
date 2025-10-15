@@ -1736,7 +1736,7 @@ p
 {
     nav .subNav{
         position: fixed;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.5);
         right: -50%;
         top: 92px;
         width: 150px;
@@ -1911,10 +1911,6 @@ p
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.cube 
-{
-    top: -100px;
 }
 .face
 {
